@@ -34,6 +34,9 @@ public class LoginPage {
 	@FindBy(how=How.XPATH, using="//p[@class='oxd-text oxd-text--p oxd-alert-content-text']")
 	WebElement err_msg;
 	
+	@FindBy(how=How.CSS, using=".oxd-text.oxd-text--p.orangehrm-login-forgot-header")
+	WebElement frgtPass;
+	
 	public void login(String user, String pass) {
 		wait.until(ExpectedConditions.visibilityOf(username));
         username.sendKeys(user);
@@ -42,7 +45,12 @@ public class LoginPage {
     }
 	
 	public String getInvalidMsg() {
+		wait.until(ExpectedConditions.visibilityOf(err_msg));
 		return err_msg.getText();
+	}
+	
+	public void clickFrgtPassword() {
+		frgtPass.click();
 	}
 
 }

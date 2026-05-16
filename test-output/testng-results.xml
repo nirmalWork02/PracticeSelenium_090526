@@ -1,88 +1,52 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results ignored="0" total="3" passed="3" failed="0" skipped="0">
+<testng-results ignored="0" total="1" passed="1" failed="0" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2026-05-08T02:24:04 IST" name="Suite" finished-at="2026-05-08T02:25:01 IST" duration-ms="57101">
+  <suite started-at="2026-05-15T19:08:17 IST" name="Default suite" finished-at="2026-05-15T19:09:09 IST" duration-ms="51442">
     <groups>
-      <group name="Happypath">
-        <method signature="HappyPath.test2()[pri:1, instance:week1.HappyPath@229f66ed]" name="test2" class="week1.HappyPath"/>
-      </group> <!-- Happypath -->
-      <group name="regression">
-        <method signature="HappyPath.test2()[pri:1, instance:week1.HappyPath@229f66ed]" name="test2" class="week1.HappyPath"/>
-        <method signature="HappyPath.test3()[pri:2, instance:week1.HappyPath@229f66ed]" name="test3" class="week1.HappyPath"/>
-      </group> <!-- regression -->
-      <group name="smoke">
-        <method signature="HappyPath.test1()[pri:0, instance:week1.HappyPath@229f66ed]" name="test1" class="week1.HappyPath"/>
-      </group> <!-- smoke -->
     </groups>
-    <test started-at="2026-05-08T02:24:04 IST" name="Test" finished-at="2026-05-08T02:25:01 IST" duration-ms="57101">
-      <class name="week1.HappyPath">
-        <test-method is-config="true" signature="setupReport()[pri:0, instance:week1.HappyPath@229f66ed]" started-at="2026-05-08T02:24:03 IST" name="setupReport" finished-at="2026-05-08T02:24:04 IST" duration-ms="459" status="PASS">
+    <test started-at="2026-05-15T19:08:17 IST" name="Default test" finished-at="2026-05-15T19:09:09 IST" duration-ms="51442">
+      <class name="week1.LoginDataProviderTest">
+        <test-method is-config="true" signature="setupReport()[pri:0, instance:week1.LoginDataProviderTest@15de0b3c]" started-at="2026-05-15T19:08:15 IST" name="setupReport" finished-at="2026-05-15T19:08:17 IST" duration-ms="2174" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setupReport -->
-        <test-method is-config="true" signature="setUp()[pri:0, instance:week1.HappyPath@229f66ed]" started-at="2026-05-08T02:24:04 IST" name="setUp" finished-at="2026-05-08T02:24:16 IST" duration-ms="11931" status="PASS">
+        <test-method is-config="true" signature="setUp()[pri:0, instance:week1.LoginDataProviderTest@15de0b3c]" started-at="2026-05-15T19:08:18 IST" name="setUp" finished-at="2026-05-15T19:09:06 IST" duration-ms="48330" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setUp -->
-        <test-method signature="test1()[pri:0, instance:week1.HappyPath@229f66ed]" started-at="2026-05-08T02:24:16 IST" name="test1" finished-at="2026-05-08T02:24:16 IST" duration-ms="95" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- test1 -->
-        <test-method is-config="true" signature="teardown(org.testng.ITestResult)[pri:0, instance:week1.HappyPath@229f66ed]" started-at="2026-05-08T02:24:16 IST" name="teardown" finished-at="2026-05-08T02:24:16 IST" duration-ms="446" status="PASS">
+        <test-method signature="login(java.lang.String,java.lang.String)[pri:0, instance:week1.LoginDataProviderTest@15de0b3c]" started-at="2026-05-15T19:09:06 IST" name="login" data-provider="getData" finished-at="2026-05-15T19:09:08 IST" duration-ms="2131" status="PASS">
           <params>
             <param index="0">
               <value>
-                <![CDATA[[TestResult name=test1 status=SUCCESS method=HappyPath.test1()[pri:0, instance:week1.HappyPath@229f66ed] output={null}]]]>
+                <![CDATA[Admin]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[admin123]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- login -->
+        <test-method is-config="true" signature="teardown(org.testng.ITestResult)[pri:0, instance:week1.LoginDataProviderTest@15de0b3c]" started-at="2026-05-15T19:09:08 IST" name="teardown" finished-at="2026-05-15T19:09:09 IST" duration-ms="748" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[[TestResult name=login status=SUCCESS method=LoginDataProviderTest.login(java.lang.String,java.lang.String)[pri:0, instance:week1.LoginDataProviderTest@15de0b3c] output={null}]]]>
               </value>
             </param>
           </params>
           <reporter-output>
           </reporter-output>
         </test-method> <!-- teardown -->
-        <test-method is-config="true" signature="setUp()[pri:0, instance:week1.HappyPath@229f66ed]" started-at="2026-05-08T02:24:16 IST" name="setUp" finished-at="2026-05-08T02:24:23 IST" duration-ms="7157" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- setUp -->
-        <test-method signature="test2()[pri:1, instance:week1.HappyPath@229f66ed]" started-at="2026-05-08T02:24:23 IST" name="test2" finished-at="2026-05-08T02:24:36 IST" duration-ms="12233" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- test2 -->
-        <test-method is-config="true" signature="teardown(org.testng.ITestResult)[pri:0, instance:week1.HappyPath@229f66ed]" started-at="2026-05-08T02:24:36 IST" name="teardown" finished-at="2026-05-08T02:24:36 IST" duration-ms="691" status="PASS">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA[[TestResult name=test2 status=SUCCESS method=HappyPath.test2()[pri:1, instance:week1.HappyPath@229f66ed] output={null}]]]>
-              </value>
-            </param>
-          </params>
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- teardown -->
-        <test-method is-config="true" signature="setUp()[pri:0, instance:week1.HappyPath@229f66ed]" started-at="2026-05-08T02:24:36 IST" name="setUp" finished-at="2026-05-08T02:24:43 IST" duration-ms="6661" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- setUp -->
-        <test-method signature="test3()[pri:2, instance:week1.HappyPath@229f66ed]" started-at="2026-05-08T02:24:43 IST" name="test3" finished-at="2026-05-08T02:25:00 IST" duration-ms="17314" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- test3 -->
-        <test-method is-config="true" signature="teardown(org.testng.ITestResult)[pri:0, instance:week1.HappyPath@229f66ed]" started-at="2026-05-08T02:25:00 IST" name="teardown" finished-at="2026-05-08T02:25:01 IST" duration-ms="485" status="PASS">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA[[TestResult name=test3 status=SUCCESS method=HappyPath.test3()[pri:2, instance:week1.HappyPath@229f66ed] output={null}]]]>
-              </value>
-            </param>
-          </params>
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- teardown -->
-        <test-method is-config="true" signature="teardownReport()[pri:0, instance:week1.HappyPath@229f66ed]" started-at="2026-05-08T02:25:01 IST" name="teardownReport" finished-at="2026-05-08T02:25:01 IST" duration-ms="540" status="PASS">
+        <test-method is-config="true" signature="teardownReport()[pri:0, instance:week1.LoginDataProviderTest@15de0b3c]" started-at="2026-05-15T19:09:09 IST" name="teardownReport" finished-at="2026-05-15T19:09:11 IST" duration-ms="1640" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- teardownReport -->
-      </class> <!-- week1.HappyPath -->
-    </test> <!-- Test -->
-  </suite> <!-- Suite -->
+      </class> <!-- week1.LoginDataProviderTest -->
+    </test> <!-- Default test -->
+  </suite> <!-- Default suite -->
 </testng-results>

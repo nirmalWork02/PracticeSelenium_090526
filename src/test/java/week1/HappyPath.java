@@ -18,7 +18,7 @@ import pages.LoginPage;
 
 public class HappyPath extends BaseClass {
 	
-	LoginPage page; 
+	//LoginPage page; 
 	
 
 	@Test(groups = {"smoke"})
@@ -74,6 +74,18 @@ public class HappyPath extends BaseClass {
 		Assert.assertTrue(page.getInvalidMsg().contains("Invalid"), "Valid Credentials, Test Will fail");
 		Thread.sleep(Duration.ofSeconds(10));
 	
+	}
+	
+	@Test
+	public void testForgetPass() {
+		
+		test=reports.createTest("Forget Password Test");
+		test.info("Clicking Forgot Password");
+		//page = new LoginPage(driver);
+		page.clickFrgtPassword();
+		Assert.assertTrue(driver.getCurrentUrl().contains("auth/requestPasswordResetCode"));
+		
+		
 	}
 
 }

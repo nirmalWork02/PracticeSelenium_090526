@@ -30,6 +30,7 @@ public class BaseClass {
 	
 	protected WebDriver driver;
 	protected WaitUtilProvider wait;
+	protected LoginPage page; 
 	
 	// Create Reporter
 		ExtentSparkReporter spark;
@@ -55,9 +56,13 @@ public class BaseClass {
 		driver=BrowserFactory.browser(con.getBrowser());
 		
 		wait=new WaitUtilProvider(30,driver);
+
+	
 		driver.get(con.getQaUrl());
+		 page = new LoginPage(driver);  
 		
 		exl = new ExcelDataProvider();
+		
 		
 		
 	}
