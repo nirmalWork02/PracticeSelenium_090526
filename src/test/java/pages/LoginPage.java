@@ -34,6 +34,12 @@ public class LoginPage {
 	@FindBy(how=How.XPATH, using="//p[@class='oxd-text oxd-text--p oxd-alert-content-text']")
 	WebElement err_msg;
 	
+	@FindBy(how=How.XPATH, using="(//span[text()='Required'])[1]")
+	WebElement inline_errMsg1;
+	
+	@FindBy(how=How.XPATH, using="//span[text()='Required']")
+	WebElement inline_errMsg2;
+	
 	@FindBy(how=How.CSS, using=".oxd-text.oxd-text--p.orangehrm-login-forgot-header")
 	WebElement frgtPass;
 	
@@ -48,7 +54,15 @@ public class LoginPage {
 		wait.until(ExpectedConditions.visibilityOf(err_msg));
 		return err_msg.getText();
 	}
+	public String getInerrMsg1() {
+		wait.until(ExpectedConditions.visibilityOf(inline_errMsg1));
+		return inline_errMsg1.getText();
+	}
 	
+	public String getInerrMsg2() {
+		wait.until(ExpectedConditions.visibilityOf(inline_errMsg2));
+		return inline_errMsg2.getText();
+	}
 	public void clickFrgtPassword() {
 		frgtPass.click();
 	}

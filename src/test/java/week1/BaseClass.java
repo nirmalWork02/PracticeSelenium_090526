@@ -12,6 +12,7 @@ import org.testng.annotations.AfterSuite;
 import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.BeforeSuite;
 import org.testng.annotations.BeforeTest;
+import org.testng.asserts.SoftAssert;
 
 import com.aventstack.extentreports.ExtentReports;
 import com.aventstack.extentreports.ExtentTest;
@@ -23,6 +24,7 @@ import pages.LoginPage;
 import utilities.BrowserFactory;
 import utilities.ConfigProvider;
 import utilities.ExcelDataProvider;
+import utilities.ExcelWithDataProvider;
 import utilities.ScreenshotProvider;
 import utilities.WaitUtilProvider;
 
@@ -41,6 +43,11 @@ public class BaseClass {
 		ConfigProvider con;
 	//Excel
 		ExcelDataProvider exl;
+	//ExceldataProvider
+		ExcelWithDataProvider ex;
+		
+	//SoftAssert
+		SoftAssert sa;
 		
 	@BeforeSuite
 	public void setupReport() {
@@ -61,7 +68,9 @@ public class BaseClass {
 		driver.get(con.getQaUrl());
 		 page = new LoginPage(driver);  
 		
-		exl = new ExcelDataProvider();
+		//exl = new ExcelDataProvider();
+		 ex=new ExcelWithDataProvider();
+		 sa = new SoftAssert();
 		
 		
 		
